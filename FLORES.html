@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>FLORES</title>
+
+<bgsound src="videoplayback.mp3" autoplay loop="-1"></bgsound>
+<bgsound src="videoplayback.ogg" autoplay loop="infinite"></bgsound>
+
 </head>
 
-<body class="container">
+<body class="container" onclick="PlayAudio()">
     <div class="night"></div>
     <div class="flowers">
       <div class="flower flower--1">
@@ -308,5 +312,16 @@
       </div>
     </div>
     <script src="main.js"></script>
+
+    <audio id="musica" autoplay loop>
+      <source src="videoplayback.mp3" type="audio/mpeg">
+      <source src="videoplayback.ogv" type="audio/ogg">
+    </audio>
+
+    <script>
+      function PlayAudio(){
+        document.getElementById("musica").play();
+      }
+    </script>
   </body>
 </html>
