@@ -8,7 +8,7 @@
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>FLORES</title>
 </head>
-<body>
+<body onclick="PlayAudio()">
     <div class="greetings">
 
         <span>A</span>
@@ -36,5 +36,16 @@
         </button>
         
     </div>
+
+    <audio id="musica" autoplay loop>
+        <source src="videoplayback.mp3" type="audio/mpeg">
+        <source src="videoplayback.ogv" type="audio/ogg">
+      </audio>
+  
+      <script>
+        function PlayAudio(){
+          document.getElementById("musica").play();
+        }
+      </script>
 </body>
 </html>
