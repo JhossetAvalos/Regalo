@@ -1,59 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feliz Aniversario 🌷</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="icon" href="img/flowers.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flores para ti 🌷</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="icon" href="img/flowers.png" type="image/png" />
 </head>
-
-<body onclick="PlayAudio()">
+<body class="not-loaded" onclick="PlayAudio()">
   <div class="night"></div>
+  <div class="flowers">
+    <div class="flower flower--1">
+      <div class="flower__leafs flower__leafs--1">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
 
-  <!-- 💖 Mensaje central -->
+    <div class="flower flower--2">
+      <div class="flower__leafs flower__leafs--2">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
+
+    <div class="flower flower--3">
+      <div class="flower__leafs flower__leafs--3">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
+  </div>
+
   <div class="description">
-    <h1>Feliz aniversario, mi amor 🌸</h1>
+    <h1>Feliz aniversario, Andrea 🌸</h1>
     <p>“Cada día contigo florece algo hermoso en mi corazón.” 💞</p>
   </div>
 
-  <!-- 🌷 Flores tulipanes -->
-  <div class="flowers">
-    <div class="tulip" style="--d:0s;">
-      <div class="stem"></div>
-      <div class="petal petal1"></div>
-      <div class="petal petal2"></div>
-      <div class="petal petal3"></div>
-      <div class="petal petal4"></div>
-    </div>
-
-    <div class="tulip" style="--d:0.5s;">
-      <div class="stem"></div>
-      <div class="petal petal1"></div>
-      <div class="petal petal2"></div>
-      <div class="petal petal3"></div>
-      <div class="petal petal4"></div>
-    </div>
-
-    <div class="tulip" style="--d:1s;">
-      <div class="stem"></div>
-      <div class="petal petal1"></div>
-      <div class="petal petal2"></div>
-      <div class="petal petal3"></div>
-      <div class="petal petal4"></div>
-    </div>
-  </div>
-
-  <!-- 🎵 Música -->
   <audio id="musica" autoplay loop>
-    <source src="videoplayback.mp3" type="audio/mpeg">
-    <source src="videoplayback.ogv" type="audio/ogg">
+    <source src="videoplayback.mp3" type="audio/mpeg" />
+    <source src="videoplayback.ogg" type="audio/ogg" />
   </audio>
 
   <script>
     function PlayAudio() {
       document.getElementById("musica").play();
     }
+    window.addEventListener('load', () => {
+      document.body.classList.remove('not-loaded');
+    });
   </script>
 </body>
 </html>
